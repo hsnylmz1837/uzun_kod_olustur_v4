@@ -19,7 +19,7 @@ def read_schema(file)->dict:
         "options":  pd.read_excel(xls, "options"),
     }
 
-STATIC_SCHEMA = os.getenv("STATIC_SCHEMA", "true").lower() == "true"
+STATIC_SCHEMA = os.getenv("STATIC_SCHEMA", "false").lower() == "false"
 DEFAULT_SCHEMA_PATH = "data/schema.xlsx"
 
 def get_schema():
